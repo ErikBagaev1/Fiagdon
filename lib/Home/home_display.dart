@@ -1,7 +1,8 @@
 import 'package:fiagdon/Home/homeClass.dart';
+import 'package:fiagdon/Home/home_about.dart';
 import 'package:flutter/material.dart';
 
-final home = [
+final List<HomeClass> home = [
   HomeClass(
       name: "Orange roof",
       about: "Коттедж в фиагдоне",
@@ -33,9 +34,14 @@ class HomeDisplayWidget extends StatelessWidget {
                 child: InkWell(
                   splashColor: Colors.lightBlue[50],
                   onTap: () {
-                    print("${index} Tapped a Container");
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              HomeAbout(id: index, list: home[index]),
+                        ));
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

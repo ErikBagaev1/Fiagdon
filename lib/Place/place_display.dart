@@ -65,7 +65,8 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                   decoration: BoxDecoration(
                       color: ThemeColor.placeContainer,
                       border: Border.all(color: ThemeColor.main, width: 2),
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(15))),
                   child: Column(
                     children: [
                       Padding(
@@ -73,7 +74,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                         child: Text(
                           person.name,
                           textAlign: TextAlign.start,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 25, fontWeight: FontWeight.w500),
                         ),
                       ),
@@ -89,7 +90,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
           )),
         ),
         Padding(
-            padding: const EdgeInsets.only(top: 58.0, left: 10),
+            padding: const EdgeInsets.only(top: 5.0, left: 10, right: 10),
             child: Row(
               children: [
                 Expanded(
@@ -103,14 +104,10 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50.0),
                       ),
-                      prefixIcon: Icon(Icons.search),
+                      prefixIcon: const Icon(Icons.search),
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(14.0),
-                  child: Icon(Icons.shopping_cart),
-                )
               ],
             ))
       ],

@@ -23,21 +23,26 @@ class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(''),
+      ),
       body: IndexedStack(
         index: _selectedTab,
         children: [
-          Container(color: ThemeColor.display, child: PlaceDisplayWidget()),
-          HomeDisplayWidget(),
-          CultureDisplayWidget(),
+          Container(
+              color: ThemeColor.display, child: const PlaceDisplayWidget()),
+          const HomeDisplayWidget(),
+          const CultureDisplayWidget(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
         unselectedItemColor: ThemeColor.iconUnselected,
         currentIndex: _selectedTab,
+        // ignore: prefer_const_literals_to_create_immutables
         items: [
-          BottomNavigationBarItem(
-              icon: const Icon(Icons.place_outlined), label: 'Места'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.place_outlined), label: 'Места'),
           BottomNavigationBarItem(
               icon: const Icon(Icons.home_outlined), label: 'Дома'),
           BottomNavigationBarItem(

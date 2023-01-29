@@ -26,7 +26,7 @@ class HomeDisplayWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: ListView.builder(
         itemCount: home.length,
-        itemBuilder: (BuildContext, int index) {
+        itemBuilder: (BuildContext context, int index) {
           return Column(
             children: [
               Padding(

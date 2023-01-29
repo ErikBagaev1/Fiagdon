@@ -24,7 +24,7 @@ class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: const Center(child: Text('Осетия (->) Иристон')),
       ),
       body: IndexedStack(
         index: _selectedTab,
@@ -43,10 +43,10 @@ class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
         items: [
           const BottomNavigationBarItem(
               icon: Icon(Icons.place_outlined), label: 'Места'),
-          BottomNavigationBarItem(
-              icon: const Icon(Icons.home_outlined), label: 'Дома'),
-          BottomNavigationBarItem(
-              icon: const Icon(Icons.book_outlined), label: 'Культура'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: 'Дома'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.book_outlined), label: 'Культура'),
         ],
         onTap: (onSelectedTab),
       ),

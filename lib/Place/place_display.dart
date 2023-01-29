@@ -57,7 +57,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
           child: (ListView.builder(
             itemCount: _searchPlace.length,
             itemExtent: 185,
-            itemBuilder: (BuildContext, int index) {
+            itemBuilder: (BuildContext context, int index) {
               final person = _searchPlace[index];
               return Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -102,7 +102,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                       filled: true,
                       fillColor: Colors.white.withAlpha(200),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0),
+                        borderRadius: BorderRadius.circular(15.0),
                       ),
                       prefixIcon: const Icon(Icons.search),
                     ),

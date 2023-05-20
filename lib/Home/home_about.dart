@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class HomeAbout extends StatelessWidget {
   final int id;
-  final String list;
+  final HomeClass list;
 
   const HomeAbout({Key? key, required this.id, required this.list})
       : super(key: key);
@@ -14,7 +14,7 @@ class HomeAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text(list)),
+          title: Center(child: Text(list.name)),
         ),
         body: Text(id.toString()));
   }

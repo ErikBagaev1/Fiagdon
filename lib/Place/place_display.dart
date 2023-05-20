@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiagdon/Place/PlaceList.dart';
 import 'package:fiagdon/Theme/Theme.dart';
 import 'package:flutter/material.dart';
@@ -57,6 +56,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
           padding: const EdgeInsets.only(top: 68.0),
           child: (ListView.builder(
             itemCount: _searchPlace.length,
+            itemExtent: 185,
             itemBuilder: (BuildContext context, int index) {
               final person = _searchPlace[index];
               return Padding(

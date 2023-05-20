@@ -1,9 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiagdon/Culture/culture_display.dart';
 import 'package:fiagdon/Home/home_display.dart';
 import 'package:fiagdon/Place/place_display.dart';
 import 'package:fiagdon/Theme/Theme.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class BasikDisplayWidget extends StatefulWidget {
@@ -16,7 +14,6 @@ class BasikDisplayWidget extends StatefulWidget {
 class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
   int _selectedTab = 0;
   void onSelectedTab(int index) {
-   
     if (onSelectedTab == index) return;
     setState(() {
       _selectedTab = index;

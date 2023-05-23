@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 final place = [
   PlaceList(
-      name: "Кармадон",
+      name: "Буква ае",
       about:
-          "Определить цвет пикселя онлайн. Утилита для определения цвета пикселя на скриншоте или картинке для браузера Chrome. (Инструмент пипетка онлайн). Поддерживает альфа-канал (полупрозрачный цвет) для PNG файлов. ",
+        "",
       star: 4.4),
-  PlaceList(name: "Дигора", about: "Курорт", star: 4.4),
+  PlaceList(name: "Скамейка", about: "", star: 4.4),
 ];
 
 class PlaceDisplayWidget extends StatefulWidget {

@@ -24,7 +24,7 @@ class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Осетия (->) Иристон')),
+        title: const Center(child: Text('FIAGDON')),
       ),
       body: IndexedStack(
         index: _selectedTab,

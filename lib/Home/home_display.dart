@@ -41,7 +41,12 @@ class HomeDisplayWidget extends StatelessWidget {
                               HomeAbout(id: index, list: home[index]),
                         ));
                   },
-                  child: SizedBox(
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 199, 230, 255),
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

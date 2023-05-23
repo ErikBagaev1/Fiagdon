@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1074684987905",
+    "project_id": "fiagdon-91eab",
+    "storage_bucket": "fiagdon-91eab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074684987905:android:49474ae229963093e18e00",
+        "android_client_info": {
+          "package_name": "com.example.fiagdon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074684987905-g40ct0bfgnlv4ghgqe9mlbglqr4jsl1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fiagdon",
+            "certificate_hash": "be218ecf47c00c89898b8edfc649269094e3e53b"
+          }
+        },
+        {
+          "client_id": "1074684987905-2m4n2ve97lcsmva6ah50kabg63ot1plt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAahq1Tnx07FG80mN8kHvC-gcClbsXqxNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074684987905-2m4n2ve97lcsmva6ah50kabg63ot1plt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

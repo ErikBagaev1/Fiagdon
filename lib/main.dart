@@ -1,8 +1,18 @@
 import 'package:fiagdon/Basik/basik_display.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyAahq1Tnx07FG80mN8kHvC-gcClbsXqxNM",
+          appId: "1:1074684987905:android:49474ae229963093e18e00",
+          messagingSenderId: "1074684987905",
+          projectId: "fiagdon-91eab",
+          storageBucket:
+              "fiagdon-91eab.appspot.com")); // инициализация Firebase
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

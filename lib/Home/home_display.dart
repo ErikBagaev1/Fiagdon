@@ -1,3 +1,4 @@
+import 'package:fiagdon/Ficha/firebase_image.dart';
 import 'package:fiagdon/Home/homeClass.dart';
 import 'package:fiagdon/Home/home_about.dart';
 import 'package:flutter/material.dart';
@@ -67,6 +68,13 @@ class HomeDisplayWidget extends StatelessWidget {
                           ),
                           width: double.infinity,
                           height: 150,
+
+//---------------------------------------------------------------------------------------------//
+                          //  Не получается подключить Firebase
+                          //   child: const MyImageWidget(
+                          //       imagePath:
+                          //           'gs://fiagdon-91eab.appspot.com/билет.png'),
+//---------------------------------------------------------------------------------------------//
                         ),
                         const SizedBox(
                           height: 15,
@@ -94,6 +102,7 @@ class HomeDisplayWidget extends StatelessWidget {
                           style: const TextStyle(
                               fontSize: 14, fontWeight: FontWeight.bold),
                         ),
+                        const SizedBox(height: 6),
                         Row(
                           children: [
                             Expanded(

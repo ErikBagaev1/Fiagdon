@@ -1,16 +1,18 @@
 class PlaceList {
   final String name;
   final String about;
-  final double star;
-  // final int price;
+  final int id;
+  final String url;
   // final String location;
   // final int sleepingPlaces;
 
   PlaceList(
-      // {required this.price,
       // required this.location,
       // required this.sleepingPlaces,
-      {required this.name,
-      required this.about,
-      required this.star});
+      {
+    required this.name,
+    required this.about,
+    required this.id,
+    required this.url,
+  });
 }

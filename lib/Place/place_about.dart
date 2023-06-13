@@ -1,5 +1,15 @@
 import 'package:fiagdon/Place/PlaceList.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+_launchGoogleMaps() async {
+  final uri = Uri.parse('https://flutter.dev');
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
+  } else {
+    throw 'Could not launch $uri';
+  }
+}
 
 class PlaceAboutWidget extends StatelessWidget {
   final int id;
@@ -27,12 +37,31 @@ class PlaceAboutWidget extends StatelessWidget {
                         width: double.infinity,
                       ),
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     Text(
                       place.about,
                       style: const TextStyle(
                         fontSize: 20,
                       ),
                       textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    ElevatedButton(
+                      onPressed: _launchGoogleMaps,
+                      style: ButtonStyle(
+                        minimumSize:
+                            MaterialStateProperty.all(const Size(200, 50)),
+                      ),
+                      child: const Text(
+                        "Маршрут",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
                   ],
                 ),

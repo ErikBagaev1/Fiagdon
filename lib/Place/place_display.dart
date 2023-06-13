@@ -23,8 +23,7 @@ final place = [
       url: "assets/images/mech.jpg"),
   PlaceList(
       name: "Зеркальный барс",
-      about:
-          '''Этот арт-объект установлен в Кадаргаванском каньоне. 
+      about: '''Этот арт-объект установлен в Кадаргаванском каньоне. 
       Скульптура животного, которое крадется по скале,
        покрыта зеркальными элементами, 
        за счет которых барс частично отражает окружающий пейзаж и становится отчасти невидимым.
@@ -103,6 +102,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
     _searConroller.addListener((_searchWorker));
   }
 
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
@@ -112,7 +112,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
             itemCount: _searchPlace.length,
             itemExtent: 425,
             itemBuilder: (BuildContext context, int index) {
-              final person = _searchPlace[index];
+              final place = _searchPlace[index];
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
@@ -122,7 +122,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              PlaceAboutWidget(id: index, place: place[index]),
+                              PlaceAboutWidget(id: index, place: place),
                         ));
                   },
                   child: Container(
@@ -136,7 +136,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            person.name,
+                            place.name,
                             textAlign: TextAlign.start,
                             style: const TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.w500),
@@ -145,7 +145,7 @@ class _PlaceDisplayWidgetState extends State<PlaceDisplayWidget> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            place[index].url,
+                            place.url,
                             height: 340,
                           ),
                         ),

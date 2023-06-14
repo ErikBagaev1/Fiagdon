@@ -7,9 +7,9 @@ import '../Home/home_display.dart';
 
 final place = [
   PlaceList(
-      name: "Меч в камне",
-      about:
-          '''Этот арт-объект невероятных размеров находится в Мидаграбинской долине.\n
+    name: "Меч в камне",
+    about:
+        '''Этот арт-объект невероятных размеров находится в Мидаграбинской долине.\n
       Он представляет собой металлический клинок,
       воткнутый в пятиметровый камень, когда-то отколовшийся от скалы,
       и отсылает к английской легенде о короле Артуре и мече Эскалибуре.
@@ -19,11 +19,13 @@ final place = [
       нанятые Марком Аврелием во времена Римской империи и посланные на службу 
       в Британию.Добраться до арт-объекта несложно: двигайтесь в сторону Мидаграбинских водопадов 
       — проехать мимо невозможно.''',
-      id: 1,
-      url: "assets/images/mech.jpg"),
+    id: 1,
+    url: "assets/images/mech.jpg",
+    location: 'geo:42.793301,44.373450',
+  ),
   PlaceList(
-      name: "Зеркальный барс",
-      about: '''Этот арт-объект установлен в Кадаргаванском каньоне. 
+    name: "Зеркальный барс",
+    about: '''Этот арт-объект установлен в Кадаргаванском каньоне. 
       Скульптура животного, которое крадется по скале,
        покрыта зеркальными элементами, 
        за счет которых барс частично отражает окружающий пейзаж и становится отчасти невидимым.
@@ -33,36 +35,56 @@ final place = [
        — животное исчезающее. В Средневековье в Алании их водилось очень много, 
        но со временем популяция сильно сократилась, 
        и сегодня барсов стремятся спасти.''',
-      id: 2,
-      url: "assets/images/bars.jpg"),
-  PlaceList(name: "Æ", about: "", id: 3, url: "assets/images/ae.jpg"),
+    id: 2,
+    url: "assets/images/bars.jpg",
+    location: 'geo:42.882660, 44.326847',
+  ),
   PlaceList(
-      name: "Портрет Косты Хетагурова",
-      about: "",
-      id: 4,
-      url: "assets/images/kosta.jpg"),
+    name: "Æ",
+    about: "",
+    id: 3,
+    url: "assets/images/ae.jpg",
+    location: 'geo:42.834470, 44.368868',
+  ),
   PlaceList(
-      name: "Колесо Балсага",
-      about: "",
-      id: 5,
-      url: "assets/images/koleso.jpg"),
+    name: "Портрет Косты Хетагурова",
+    about: "",
+    id: 4,
+    url: "assets/images/kosta.jpg",
+    location: 'geo:42.793301,44.373450',
+  ),
   PlaceList(
-      name: "Танец с кинжалами",
-      about: "",
-      id: 6,
-      url: "assets/images/kaft.jpg"),
+    name: "Колесо Балсага",
+    about: "",
+    id: 5,
+    url: "assets/images/koleso.jpg",
+    location: 'geo:42.793301,44.373450',
+  ),
+  PlaceList(
+    name: "Танец с кинжалами",
+    about: "",
+    id: 6,
+    url: "assets/images/kaft.jpg",
+    location: 'geo:42.871241, 43.957728',
+  ),
   PlaceList(
       name: "Стрелы Сослана",
       about: "",
       id: 7,
-      url: "assets/images/strela.jpg"),
+      url: "assets/images/strela.jpg",
+      location: 'geo:42.980732, 43.776736'),
   PlaceList(
       name: "Скамья в виде рога",
       about: "",
       id: 8,
-      url: "assets/images/rog.jpg"),
+      url: "assets/images/rog.jpg",
+      location: 'geo:42.794513, 44.004087'),
   PlaceList(
-      name: "Хъисын фандыр", about: "", id: 9, url: "assets/images/fandr.jpg"),
+      name: "Хъисын фандыр",
+      about: "",
+      id: 9,
+      url: "assets/images/fandr.jpg",
+      location: 'geo:42.922468, 43.836673'),
 ];
 
 class PlaceDisplayWidget extends StatefulWidget {

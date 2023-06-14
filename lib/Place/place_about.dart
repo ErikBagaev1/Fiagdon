@@ -2,8 +2,8 @@ import 'package:fiagdon/Place/PlaceList.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-_launchGoogleMaps() async {
-  final uri = Uri.parse('https://flutter.dev');
+_launchGoogleMaps(String location) async {
+  final uri = Uri.parse(location);
   if (await canLaunchUrl(uri)) {
     await launchUrl(uri);
   } else {
@@ -51,7 +51,7 @@ class PlaceAboutWidget extends StatelessWidget {
                       height: 20,
                     ),
                     ElevatedButton(
-                      onPressed: _launchGoogleMaps,
+                      onPressed: () => _launchGoogleMaps(place.location),
                       style: ButtonStyle(
                         minimumSize:
                             MaterialStateProperty.all(const Size(200, 50)),

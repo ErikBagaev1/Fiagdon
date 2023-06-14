@@ -12,7 +12,7 @@ void main() async {
           projectId: "fiagdon-91eab",
           storageBucket:
               "fiagdon-91eab.appspot.com")); // инициализация Firebase
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        "/": (context) => BasikDisplayWidget(),
+        "/": (context) => const BasikDisplayWidget(),
       },
       initialRoute: "/",
     );

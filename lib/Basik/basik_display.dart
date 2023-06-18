@@ -14,17 +14,17 @@ class BasikDisplayWidget extends StatefulWidget {
 class _BasikDisplayWidgetState extends State<BasikDisplayWidget> {
   int _selectedTab = 0;
   void onSelectedTab(int index) {
+    // ignore: unrelated_type_equality_checks
     if (onSelectedTab == index) return;
     setState(() {
       _selectedTab = index;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('FIAGDON')),
+        title: const Center(child: Text('OSSETIA')),
       ),
       body: IndexedStack(
         index: _selectedTab,

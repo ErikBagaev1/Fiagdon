@@ -20,7 +20,14 @@ class PlaceAboutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text(place.name)),
+          title: Row(
+            children: [
+              const SizedBox(
+                width: 65,
+              ),
+              Center(child: Text(place.name)),
+            ],
+          ),
         ),
         body: ListView.builder(
           itemCount: 1,
@@ -40,12 +47,14 @@ class PlaceAboutWidget extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      place.about,
-                      style: const TextStyle(
-                        fontSize: 20,
+                    Center(
+                      child: Text(
+                        place.about,
+                        style: const TextStyle(
+                          fontSize: 20,
+                        ),
+                        textAlign: TextAlign.justify,
                       ),
-                      textAlign: TextAlign.justify,
                     ),
                     const SizedBox(
                       height: 20,
